@@ -26,7 +26,7 @@ $(document).on("plotly_hover", function(e, data) {
 ui <- fluidPage(
   tags$head(tags$script(HTML(js))),
   h1("KIF1C-bioID Data"),
-  a("Publication", href='https://doi.org/10.1083/jcb.201812170'),
+  a("Original publication", href='https://doi.org/10.1083/jcb.201812170', target = "_blank"),
   # titlePanel("KIF1C bioID"),
   fluidRow(
     plotlyOutput("scatterPlot", height = 500)
