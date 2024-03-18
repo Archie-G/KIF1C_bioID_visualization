@@ -43,7 +43,7 @@ ui <- fluidPage(
 server <- function(input, output) {
   
   # setwd("/Users/qgeng/Desktop/shiny/KIF1C_bioID")
-  data <- read.csv("./tidy_bioID.csv", header = TRUE)
+  data <- read.csv("./tidy_bioID.csv", header = TRUE, fileEncoding="UTF-8-BOM")
   df <- data # df is for numeric plotting, data is for displaying
   
   data$Enrichment[data$Enrichment == 0] <- "Not present in control"
