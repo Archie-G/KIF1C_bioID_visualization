@@ -25,13 +25,16 @@ $(document).on("plotly_hover", function(e, data) {
 
 ui <- fluidPage(
   tags$head(tags$script(HTML(js))),
-  titlePanel("KIF1C bioID"),
+  h1("KIF1C-bioID Data"),
+  a("Publication", href='https://doi.org/10.1083/jcb.201812170'),
+  # titlePanel("KIF1C bioID"),
   fluidRow(
     plotlyOutput("scatterPlot", height = 500)
   ),
   fluidRow(
     textInput("search", "Search gene:", placeholder = "kif1c")
   ),
+ 
   # fluidRow(
   #   DTOutput("infoTable1")
   # ),
